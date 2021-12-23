@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { api } from "../../services/api"
+import './products.module.scss'
 
 interface FruitsProps {
     genus: String;
