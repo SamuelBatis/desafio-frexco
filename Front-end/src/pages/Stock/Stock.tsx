@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { api } from '../../services/api'
-import 'stock.module.scss'
+import './stock.module.scss'
 
 interface FruitsProps {
     genus: String;
@@ -17,7 +17,7 @@ interface FruitsProps {
     }
 }
 
-export function Stock() {
+export default function Stock() {
 
     const [fruits, setFruits] = useState<FruitsProps[]>([])
 
@@ -31,7 +31,7 @@ export function Stock() {
 
     return (
         <div className="container">
-            <h1>Stock</h1>
+            <h1 className="header">Stock</h1>
             <div className="add">
                 
             </div>
@@ -42,11 +42,9 @@ export function Stock() {
                             <h3>{fruity.name}</h3> <br />
 
                             <ul>
-                                <li>Calories: <span>{fruity.nutritions.calories}</span></li>
-                                <li>carbohydrates: <span>{fruity.nutritions.carbohydrates}</span></li>
-                                <li>fat: <span>{fruity.nutritions.fat}</span></li>
-                                <li>protein: <span>{fruity.nutritions.protein}</span></li>
-                                <li>sugar: <span>{fruity.nutritions.sugar}</span></li>
+                                <li>genus: <span>{fruity.genus}</span></li>
+                                <li>order: <span>{fruity.order}</span></li>
+                                <li>family: <span>{fruity.family}</span></li>
                             </ul>
                            <span>Amount on the stock: 0</span>
                         </li>

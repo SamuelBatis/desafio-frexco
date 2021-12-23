@@ -9,7 +9,7 @@ export default function Home() {
             <nav>
                <Link to='products'> <button className="btn">Products</button> </Link> 
                <br />
-                <button className="btn"> Stock </button>
+                <Link to='Stock'><button className="btn"> Stock </button></Link>
             </nav>
         </div>
     )
